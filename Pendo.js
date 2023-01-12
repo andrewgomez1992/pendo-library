@@ -14,7 +14,7 @@ const { visitorId, accountId } = generateUniqueIds();
 localStorage.setItem('visitorId', visitorId);
 localStorage.setItem('accountId', accountId);
 
-export const Pendo = new pendo({
+export const pendo = new Pendo({
   apiKey,
   visitor: {
     id: visitorId,
