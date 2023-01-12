@@ -1,15 +1,23 @@
-import Pendo from 'pendo-library';
+import pendo from 'pendo-library';
+import { v4 as uuidv4 } from 'uuid';
+
+const apiKey = process.env.PENDO_API_KEY;
+
+function generateUniqueIds() {
+  const visitorId = uuidv4();
+  const accountId = uuidv4();
+  return { visitorId, accountId };
+}
+
+const { visitorId, accountId } = generateUniqueIds();
+
+localStorage.setItem('visitorId', visitorId);
+localStorage.setItem('accountId', accountId);
 
 export const pendo = new Pendo({
-  apiKey: 'YOUR_API_KEY',
+  apiKey,
   visitor: {
-    id: 'UNIQUE_VISITOR_ID',
-  },
-  account: {
-    id: 'ACCOUNT_ID',
-  },
-  options: {
-    accountName: 'ACCOUNT_NAME',
+    id: visitorId,
   },
 });
 
@@ -39,20 +47,12 @@ export const pendo = new Pendo({
   // Call this whenever information about the current user becomes available
   // Please use the actual values for the user's id, email, and name
   pendo.initialize({
-    apiKey: apiKey,
+    apiKey,
     visitor: {
-      id: 'UNIQUE_VISITOR_ID', // Required if user is logged in
-      //   email: 'EMAIL', // Optional
-      //   role: 'ROLE', // Optional
-      //   name: 'NAME', // Optional
+      id: `testVisitorId - ${visitorId}`,
     },
     account: {
-      id: 'ACCOUNT_ID', // Required for account scoping
-      //   name: 'ACCOUNT_NAME', // Optional
-      //   industry: 'INDUSTRY', // Optional
-      //   planLevel: 'PLAN_LEVEL', // Optional
-      //   planPrice: 'PLAN_PRICE', // Optional
-      //   createdAt: 'CREATED_AT', // Optional
+      id: `testAccountId - ${accountId}`,
     },
   });
-})('YOUR_API_KEY');
+})(process.env.PENDO_API_KEY);
