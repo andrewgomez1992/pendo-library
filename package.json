@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "dotenv": "^16.0.3",
     "pendo-library": "^1.0.0"
   },
   "name": "pendo-library",
@@ -19,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/andrewgomez1992/pendo-library/issues"
   },
-  "homepage": "https://github.com/andrewgomez1992/pendo-library#readme"
+  "homepage": "https://github.com/andrewgomez1992/pendo-library#readme",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "webpack": "^5.75.0"
+  }
 }
