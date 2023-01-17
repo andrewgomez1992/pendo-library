@@ -33,7 +33,10 @@ let pendoInstance;
       })(v[w]);
     y = e.createElement(n);
     y.async = !0;
-    y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+    y.src =
+      'https://cdn.pendo.io/agent/static/' +
+      '8b61ff73-e191-4939-795c-c1f1817cc348' +
+      '/pendo.js';
     z = e.getElementsByTagName(n)[0];
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
