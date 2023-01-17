@@ -13,7 +13,7 @@ const { visitorId, accountId } = generateUniqueIds();
 localStorage.setItem('visitorId', visitorId);
 localStorage.setItem('accountId', accountId);
 
-export const pendo = pendo({
+const pendoInstance = pendo({
   apiKey,
   visitor: {
     id: visitorId,
@@ -45,7 +45,7 @@ export const pendo = pendo({
 
   // Call this whenever information about the current user becomes available
   // Please use the actual values for the user's id, email, and name
-  await pendo.initialize({
+  await pendoInstance.initialize({
     apiKey,
     visitor: {
       id: `testVisitorId - ${visitorId}`,
@@ -55,3 +55,5 @@ export const pendo = pendo({
     },
   });
 })(process.env.PENDO_API_KEY);
+
+export { pendoInstance };
