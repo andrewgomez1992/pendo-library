@@ -1,4 +1,3 @@
-require('dotenv').config();
 import { v4 as uuidv4 } from 'uuid';
 
 const apiKey = process.env.PENDO_API_KEY;
