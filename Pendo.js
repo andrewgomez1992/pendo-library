@@ -20,7 +20,7 @@ export const pendo = pendo({
   },
 });
 
-(function (apiKey) {
+(async function (apiKey) {
   (function (p, e, n, d, o) {
     var v, w, x, y, z;
     o = p[d] = p[d] || {};
@@ -45,7 +45,7 @@ export const pendo = pendo({
 
   // Call this whenever information about the current user becomes available
   // Please use the actual values for the user's id, email, and name
-  pendoInstance.initialize({
+  await pendo.initialize({
     apiKey,
     visitor: {
       id: `testVisitorId - ${visitorId}`,
