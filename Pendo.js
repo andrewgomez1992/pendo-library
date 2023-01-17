@@ -13,7 +13,9 @@ const { visitorId, accountId } = generateUniqueIds();
 localStorage.setItem('visitorId', visitorId);
 localStorage.setItem('accountId', accountId);
 
-(async function (apiKey) {
+let pendoInstance;
+
+(function (apiKey) {
   (function (p, e, n, d, o) {
     var v, w, x, y, z;
     o = p[d] = p[d] || {};
@@ -35,23 +37,16 @@ localStorage.setItem('accountId', accountId);
     z = e.getElementsByTagName(n)[0];
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
+  pendo.initialize({ apiKey: apiKey });
+})(apiKey);
 
-  // Call this whenever information about the current user becomes available
-  // Please use the actual values for the user's id, email, and name
-  await pendoInstance.initialize({
-    apiKey,
-    visitor: {
-      id: `testVisitorId - ${visitorId}`,
-    },
-    account: {
-      id: `testAccountId - ${accountId}`,
-    },
-  });
-})(process.env.PENDO_API_KEY);
+pendoInstance = pendo;
 
-export const pendoInstance = pendo({
+pendo.initialize({
   apiKey,
   visitor: {
     id: visitorId,
   },
 });
+
+export { pendoInstance };
