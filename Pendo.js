@@ -1,4 +1,3 @@
-import pendo from 'pendo-library';
 import { v4 as uuidv4 } from 'uuid';
 
 const apiKey = process.env.PENDO_API_KEY;
@@ -14,7 +13,7 @@ const { visitorId, accountId } = generateUniqueIds();
 localStorage.setItem('visitorId', visitorId);
 localStorage.setItem('accountId', accountId);
 
-export const pendoInstance = pendo({
+export const pendo = pendo({
   apiKey,
   visitor: {
     id: visitorId,
