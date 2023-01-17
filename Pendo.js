@@ -21,7 +21,7 @@ let pendoInstance;
     o = p[d] = p[d] || {};
     o._q = [];
     v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
-    for (w = 0, x = v.length; w < x; ++w)
+    for (w = 0, x = v.length; w < x; ++w) {
       (function (m) {
         o[m] =
           o[m] ||
@@ -31,25 +31,25 @@ let pendoInstance;
             );
           };
       })(v[w]);
+    }
     y = e.createElement(n);
-    y.async = !0;
-    y.src =
-      'https://cdn.pendo.io/agent/static/' +
-      '8b61ff73-e191-4939-795c-c1f1817cc348' +
-      '/pendo.js';
+    y.async = true;
+    y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
     z = e.getElementsByTagName(n)[0];
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
-  pendo.initialize({ apiKey: '8b61ff73-e191-4939-795c-c1f1817cc348' });
+
+  pendo.initialize({
+    apiKey,
+    visitor: {
+      id: visitorId,
+    },
+    account: {
+      id: accountId,
+    },
+  });
 })(apiKey);
 
 pendoInstance = pendo;
-
-pendo.initialize({
-  apiKey: '8b61ff73-e191-4939-795c-c1f1817cc348',
-  visitor: {
-    id: visitorId,
-  },
-});
 
 export { pendoInstance };
