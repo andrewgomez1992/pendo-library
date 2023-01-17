@@ -37,13 +37,13 @@ let pendoInstance;
     z = e.getElementsByTagName(n)[0];
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
-  pendo.initialize({ apiKey: apiKey });
+  pendo.initialize({ apiKey: '8b61ff73-e191-4939-795c-c1f1817cc348' });
 })(apiKey);
 
 pendoInstance = pendo;
 
 pendo.initialize({
-  apiKey,
+  apiKey: '8b61ff73-e191-4939-795c-c1f1817cc348',
   visitor: {
     id: visitorId,
   },
