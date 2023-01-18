@@ -1,7 +1,6 @@
-require('dotenv').config();
 import { v4 as uuidv4 } from 'uuid';
 
-const apiKey = process.env.PENDO_API_KEY;
+const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
   const visitorId = uuidv4();
