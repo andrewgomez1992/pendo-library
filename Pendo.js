@@ -43,6 +43,7 @@ let pendoInstance;
     apiKey,
     visitor: {
       id: visitorId,
+      package: ['MC20000', 'MC10000'],
     },
     account: {
       id: accountId,
