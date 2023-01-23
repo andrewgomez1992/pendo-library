@@ -44,6 +44,7 @@ let pendoInstance;
     visitor: {
       id: visitorId,
       package: ['MC20000', 'MC10000'],
+      weather: ['Sunny', 'Raining', 'Windy'],
     },
     account: {
       id: accountId,
