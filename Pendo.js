@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Rick James';
-  const accountId = 'Rick James';
+  const visitorId = 'Joey Diaz';
+  const accountId = 'Joey Diaz';
   return { visitorId, accountId };
 }
 
@@ -45,6 +45,7 @@ let pendoInstance;
       id: visitorId,
       package: ['MC20000', 'MC10000'],
       weather: ['Sunny', 'Raining', 'Windy'],
+      plan: ['firstplan', 'secondplan', 'thirdplan'],
     },
     account: {
       id: accountId,
