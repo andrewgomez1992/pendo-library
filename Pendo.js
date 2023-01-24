@@ -47,6 +47,7 @@ let pendoInstance;
       weather: ['Sunny', 'Raining', 'Windy'],
       plan: ['firstplan', 'secondplan', 'thirdplan'],
       mc_package: ['MC1', 'MC2', 'MC3'],
+      last_test: ['test1', 'test2'],
     },
     account: {
       id: accountId,
