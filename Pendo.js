@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Joe Rogan';
-  const accountId = 'Joe Rogan';
+  const visitorId = 'Rick James';
+  const accountId = 'Rick James';
   return { visitorId, accountId };
 }
 
