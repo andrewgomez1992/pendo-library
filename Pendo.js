@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Aliens';
-  const accountId = 'Aliens';
+  const visitorId = 'Mike Tyson';
+  const accountId = 'Mike Tyson';
   return { visitorId, accountId };
 }
 
@@ -48,6 +48,7 @@ let pendoInstance;
       plan: ['firstplan', 'secondplan', 'thirdplan'],
       mc_package: ['MC1', 'MC2', 'MC3'],
       last_test: ['test1', 'test2'],
+      workouts: ['run', 'lift'],
     },
     account: {
       id: accountId,
