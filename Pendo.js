@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Counting Channels';
-  const accountId = 'Counting Channels';
+  const visitorId = 'James Reeves';
+  const accountId = 'James Reeves';
   return { visitorId, accountId };
 }
 
