@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Mike Tyson';
-  const accountId = 'Mike Tyson';
+  const visitorId = 'CodeBro JUNIOR';
+  const accountId = 'CodeBro JUNIOR';
   return { visitorId, accountId };
 }
 
