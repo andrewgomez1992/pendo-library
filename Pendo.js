@@ -49,6 +49,15 @@ let pendoInstance;
       mc_package: ['MC1', 'MC2', 'MC3'],
       last_test: ['test1', 'test2'],
       workouts: ['run', 'lift'],
+      channels: [
+        'Bing',
+        'Google',
+        'Instagram',
+        'Yelp',
+        'Facebook',
+        'Display Network',
+        'Video CTV',
+      ],
     },
     account: {
       id: accountId,
