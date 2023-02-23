@@ -3,8 +3,8 @@
 const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
 
 function generateUniqueIds() {
-  const visitorId = 'Theo Von';
-  const accountId = 'Theo Von';
+  const visitorId = 'Janis Joplin';
+  const accountId = 'Janis Joplin';
   return { visitorId, accountId };
 }
 
