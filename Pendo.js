@@ -21,7 +21,7 @@ let pendoInstance;
     }
     y = e.createElement(n);
     y.async = true;
-    y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+    y.src = `https://cdn.pendo.io/agent/static/${apiKey}/pendo.js`;
     z = e.getElementsByTagName(n)[0];
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
