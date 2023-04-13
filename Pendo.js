@@ -1,4 +1,4 @@
-import './config';
+import config from './config';
 
 let pendoInstance;
 
@@ -37,6 +37,6 @@ let pendoInstance;
       id: accountId,
     },
   });
-})(apiKey, {}, {});
+})(config.apiKey, {}, {});
 
 export { pendoInstance };
