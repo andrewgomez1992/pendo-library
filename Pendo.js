@@ -37,6 +37,6 @@ let pendoInstance;
       id: accountId,
     },
   });
-})(config.apiKey, {}, {});
+})(apiKey, {}, {});
 
 export { pendoInstance };

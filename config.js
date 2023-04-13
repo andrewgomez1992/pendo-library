@@ -1,11 +1,3 @@
-const config = {
-  visitorId: 'MY_VISITOR_ID',
-  accountId: 'MY_ACCOUNT_ID',
-};
-
-export const getConfig = (apiKey) => {
-  return {
-    ...config,
-    apiKey,
-  };
+export const config = (apiKey, visitorId, accountId) => {
+  apiKey, visitorId, accountId;
 };
