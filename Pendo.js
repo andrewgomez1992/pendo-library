@@ -1,21 +1,8 @@
-// import { v4 as uuidv4 } from 'uuid';
-
-const apiKey = '8b61ff73-e191-4939-795c-c1f1817cc348';
-
-function generateUniqueIds() {
-  const visitorId = 'Janis Joplin';
-  const accountId = 'Janis Joplin';
-  return { visitorId, accountId };
-}
-
-const { visitorId, accountId } = generateUniqueIds();
-
-localStorage.setItem('visitorId', visitorId);
-localStorage.setItem('accountId', accountId);
+import config from './config';
 
 let pendoInstance;
 
-(function (apiKey) {
+(function (apiKey, visitorId, accountId) {
   (function (p, e, n, d, o) {
     var v, w, x, y, z;
     o = p[d] = p[d] || {};
@@ -39,32 +26,17 @@ let pendoInstance;
     z.parentNode.insertBefore(y, z);
   })(window, document, 'script', 'pendo');
 
-  pendo.initialize({
+  pendoInstance = pendo;
+
+  pendoInstance.initialize({
     apiKey,
     visitor: {
       id: visitorId,
-      package: ['MC20000', 'MC10000'],
-      weather: ['Sunny', 'Raining', 'Windy'],
-      plan: ['firstplan', 'secondplan', 'thirdplan'],
-      mc_package: ['MC1', 'MC2', 'MC3'],
-      last_test: ['test1', 'test2'],
-      workouts: ['run', 'lift'],
-      channels: [
-        'Bing',
-        'Google',
-        'Instagram',
-        'Yelp',
-        'Facebook',
-        'Display Network',
-        'Video CTV',
-      ],
     },
     account: {
       id: accountId,
     },
   });
-})(apiKey);
-
-pendoInstance = pendo;
+})(config.apiKey, {}, {});
 
 export { pendoInstance };
